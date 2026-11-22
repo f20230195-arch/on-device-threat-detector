@@ -1,0 +1,40 @@
+W1122 18:52:15.835000 1230 venv/lib/python3.13/site-packages/torch/utils/_pytree.py:646] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+W1122 18:52:15.895000 1230 venv/lib/python3.13/site-packages/torch/utils/_pytree.py:646] <enum 'ScaleCalculationMode'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+Detectors loaded in 2.26 s | Llama loaded in 2.37 s
+Pi temp 38.9 C | throttled=0x0 | RSS after load 898 MB
+============================================================
+
+> Dear customer, your SBI account will be blocked today. Update your KYC immediately to avoid suspension.
+VERDICT: HIGH RISK  (input type: SMS)
+  Message scam score: model 0.92 -> final 0.90
+  Rules matched: 3
+
+Why (llama): This message is likely a scam because it matches known scam messages, and it has warning signs that are typical of scams.
+Action: Do not click any links, reply, or share any details. Delete it and report it as spam.
+  [timing] detectors 8 ms | LLM 9.6 s (prompt 358 tok, first token 7.7 s, 12.74 tok/s) | end-to-end 9.6 s | peak RAM 2788 MB | 46.6 C | throttled=0x0
+------------------------------------------------------------
+
+Log saved to /home/armsocproject/threat_detector/results/run_20261122_185219.jsonl
+	Command being timed: "python pi_pipeline.py --text Dear customer, your SBI account will be blocked today. Update your KYC immediately to avoid suspension."
+	User time (seconds): 34.76
+	System time (seconds): 1.22
+	Percent of CPU this job got: 149%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:24.08
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2854768
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 9
+	Minor (reclaiming a frame) page faults: 228865
+	Voluntary context switches: 20798
+	Involuntary context switches: 448
+	Swaps: 0
+	File system inputs: 473680
+	File system outputs: 32
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0

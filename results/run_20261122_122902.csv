@@ -1,0 +1,23 @@
+iter,n,input,type,verdict,source,fallback,prompt_tok,gen_tok,ttft_s,tok_per_s,llm_s,e2e_s,detect_ms,rss_mb,temp_c,throttled
+1,1,Congratulations! You won a free prize. Claim,SMS,HIGH RISK,llama,,352,27,10.695,12.24,12.8159,12.873,43.22,2766.3,57.1,throttled=0x0
+1,2,http://secure-login-paypal.verify-account.xy,URL,HIGH RISK,llama,,374,37,4.244,11.73,7.2823,7.3072,24.61,2776.0,57.1,throttled=0x0
+1,3,Are we meeting at 5 for the lab session?,SMS,LOW RISK,llama,,326,11,3.585,13.05,4.3449,4.3478,2.63,2776.0,57.1,throttled=0x0
+1,4,https://www.google.com,URL,LOW RISK,llama,,325,17,3.578,12.84,4.8191999999999995,4.8195,0.05,2776.0,59.3,throttled=0x0
+1,5,"Dear customer, your SBI account will be bloc",SMS,HIGH RISK,llama,,404,33,4.672,11.83,7.350899999999999,7.3763000000000005,25.12,2781.6,58.2,throttled=0x0
+1,6,Your OTP is 482913. Do not share it with any,SMS,LOW RISK,llama,,326,11,3.768,13.22,4.5161999999999995,4.5178,1.34,2781.6,59.3,throttled=0x0
+1,7,"Hey, are you free for dinner tomorrow?",SMS,LOW RISK,llama,,326,11,3.685,13.21,4.4355,4.4369,1.24,2781.6,61.5,throttled=0x0
+1,8,"Dear customer, your SBI account will be bloc",SMS,HIGH RISK,llama,,358,25,4.09,12.13,6.0432,6.0448,1.37,2781.6,61.5,throttled=0x0
+1,9,Aapka bank account band ho jayega. Abhi KYC ,SMS,HIGH RISK,llama,,358,25,4.06,12.35,6.0011,6.0026,1.27,2781.6,59.8,throttled=0x0
+1,10,"You have won Rs 25,00,000 in the KBC lottery",SMS,HIGH RISK,llama,,349,24,3.971,12.42,5.820399999999999,5.821899999999999,1.33,2781.6,59.8,throttled=0x0
+1,11,http://paytm-secure-offer.xyz/?id=123,URL,HIGH RISK,llama,,366,51,4.162,11.96,8.3414,8.3657,24.08,2781.6,60.9,throttled=0x0
+2,12,Congratulations! You won a free prize. Claim,SMS,HIGH RISK,llama,,352,27,3.977,12.25,6.0969,6.1224,25.24,2781.6,61.5,throttled=0x0
+2,13,http://secure-login-paypal.verify-account.xy,URL,HIGH RISK,llama,,374,37,4.254,12.04,7.2415,7.265899999999999,24.16,2781.6,62.0,throttled=0x0
+2,14,Are we meeting at 5 for the lab session?,SMS,LOW RISK,llama,,326,11,3.683,13.19,4.434399999999999,4.435899999999999,1.27,2781.6,62.0,throttled=0x0
+2,15,https://www.google.com,URL,LOW RISK,llama,,325,17,3.683,12.73,4.9356,4.935899999999999,0.04,2781.6,62.0,throttled=0x0
+2,16,"Dear customer, your SBI account will be bloc",SMS,HIGH RISK,llama,,404,33,4.598,12.11,7.236800000000001,7.2622,25.12,2781.6,61.5,throttled=0x0
+2,17,Your OTP is 482913. Do not share it with any,SMS,LOW RISK,llama,,326,11,3.688,13.17,4.4399,4.4414,1.28,2781.6,61.5,throttled=0x0
+2,18,"Hey, are you free for dinner tomorrow?",SMS,LOW RISK,llama,,326,11,3.687,13.21,4.4366,4.4381,1.23,2781.6,63.1,throttled=0x0
+2,19,"Dear customer, your SBI account will be bloc",SMS,HIGH RISK,llama,,358,25,4.049,12.29,5.998,5.9996,1.3,2781.6,62.6,throttled=0x0
+2,20,Aapka bank account band ho jayega. Abhi KYC ,SMS,HIGH RISK,llama,,358,25,4.052,12.29,6.0006,6.0021,1.29,2781.6,62.6,throttled=0x0
+2,21,"You have won Rs 25,00,000 in the KBC lottery",SMS,HIGH RISK,llama,,349,24,3.958,12.36,5.814100000000001,5.8157,1.26,2781.6,61.5,throttled=0x0
+2,22,http://paytm-secure-offer.xyz/?id=123,URL,HIGH RISK,llama,,366,51,4.182,11.87,8.371,8.395100000000001,23.86,2781.6,62.0,throttled=0x0

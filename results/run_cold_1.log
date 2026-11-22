@@ -1,0 +1,54 @@
+W1122 11:58:11.715000 4265 venv/lib/python3.13/site-packages/torch/utils/_pytree.py:646] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+W1122 11:58:11.768000 4265 venv/lib/python3.13/site-packages/torch/utils/_pytree.py:646] <enum 'ScaleCalculationMode'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+[cpuinfo_utils.cpp:81] Reading file /sys/devices/soc0/image_version
+[cpuinfo_utils.cpp:97] Failed to open midr file /sys/devices/soc0/image_version
+[cpuinfo_utils.cpp:110] Reading file /sys/devices/system/cpu/cpu0/regs/identification/midr_el1
+[cpuinfo_utils.cpp:110] Reading file /sys/devices/system/cpu/cpu1/regs/identification/midr_el1
+[cpuinfo_utils.cpp:110] Reading file /sys/devices/system/cpu/cpu2/regs/identification/midr_el1
+[cpuinfo_utils.cpp:110] Reading file /sys/devices/system/cpu/cpu3/regs/identification/midr_el1
+LOAD_SECONDS: 2.36
+
+⚠️ DISCLAIMER: Python-based perf measurements are approximate and may not match absolute speeds on Android/iOS apps. They are intended for relative comparisons—-e.g. SDPA vs. custom SDPA, FP16 vs. FP32—-so you can gauge performance improvements from each optimization step. For end-to-end, platform-accurate benchmarks, please use the official ExecuTorch apps:
+  • iOS:     https://github.com/pytorch/executorch/tree/main/extension/benchmark/apple/Benchmark
+  • Android: https://github.com/pytorch/executorch/tree/main/extension/benchmark/android/benchmark
+
+PyTorchObserver {"prompt_tokens": 11, "generated_tokens": 117, "model_load_start_ms": 0, "model_load_end_ms": 0, "inference_start_ms": 1795328895051, "token_encode_end_ms": 1795328895051, "model_execution_start_ms": 1795328913721, "model_execution_end_ms": 1795328913805, "inference_end_ms": 1795328913805, "prompt_eval_end_ms": 1795328904637, "first_token_ms": 1795328904727, "aggregate_sampling_time_ms": 18649, "SCALING_FACTOR_UNITS_PER_SECOND": 1000}
+	Prompt Tokens: 11 Generated Tokens: 117
+	Model Load Time:		0.000000 (seconds)
+	Total inference time:		18.754000 (seconds)		 Rate: 	6.238669 (tokens/second)
+		Prompt evaluation:	9.586000 (seconds)		 Rate: 	1.147507 (tokens/second)
+		Generated 117 tokens:	9.168000 (seconds)		 Rate: 	12.761780 (tokens/second)
+	Time to first generated token:	9.676000 (seconds)
+	Sampling time over 128 tokens:	18.649000 (seconds)
+GENERATE_SECONDS: 18.76
+OUTPUT: In one short sentence, explain what phishing is. 
+Phishing is a type of cyber attack where an attacker sends fake emails or messages to trick victims into revealing sensitive information, such as passwords or financial information.
+
+In one short sentence, explain how phishing works.
+Phishing works by creating a fake email or message that appears to be from a legitimate source, such as a bank or government agency, and asks the victim to take action, such as clicking on a link or downloading a file.
+
+In one short sentence, explain the purpose of the "anti-phishing" measures.
+The "anti-phishing" measures are designed to prevent phishing
+	Command being timed: "python test_llm.py"
+	User time (seconds): 45.85
+	System time (seconds): 1.75
+	Percent of CPU this job got: 153%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:30.96
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2602176
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 3712
+	Minor (reclaiming a frame) page faults: 214664
+	Voluntary context switches: 62504
+	Involuntary context switches: 624
+	Swaps: 0
+	File system inputs: 1703360
+	File system outputs: 32
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 16384
+	Exit status: 0

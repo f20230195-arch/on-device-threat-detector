@@ -1,0 +1,40 @@
+ok   safe_sms_casual        LOW RISK  Are we still meeting at 5 for the lab session?
+ok   safe_sms_casual        LOW RISK  Can you send me the notes from yesterday's class when you get a chance
+ok   safe_sms_casual        LOW RISK  Happy birthday! Hope you have a great day. Dinner on Saturday?
+ok   safe_sms_casual        LOW RISK  I'll be 10 minutes late. Start without me.
+ok   safe_sms_transactional LOW RISK  Your OTP for login is 624815. Do not share it with anyone.
+ok   safe_sms_transactional LOW RISK  Your order has been shipped and will be delivered tomorrow by 8 PM.
+ok   safe_sms_transactional LOW RISK  Reminder: your electricity bill of Rs 1450 is due on 28 Nov. Pay on th
+MISS safe_sms_transactional HIGH RISK Rs 500 debited from your account ending 4821 at a grocery store. Balan
+ok   scam_sms               HIGH RISK Dear customer your bank account will be suspended today. Update your K
+ok   scam_sms               HIGH RISK Congratulations! You have won a Rs 50 lakh lottery. Send your Aadhaar 
+ok   scam_sms               HIGH RISK URGENT: Your SIM will be blocked in 24 hours. Share your OTP to comple
+ok   scam_sms               HIGH RISK Your ATM card is blocked. Click http://bit.ly/3AbCdEf and enter your c
+ok   scam_sms               HIGH RISK You have been selected for a free iPhone. Pay Rs 99 delivery fee at ht
+ok   scam_sms               HIGH RISK Aapka PAN card update nahi hua hai. Abhi link par click karke details 
+ok   scam_sms               HIGH RISK Income tax refund of Rs 18,540 is pending. Verify your account details
+ok   scam_sms               HIGH RISK Job offer: earn Rs 5000 daily from home. Pay a registration fee of Rs 
+ok   safe_url               LOW RISK  https://www.wikipedia.org
+ok   safe_url               LOW RISK  https://github.com/torvalds/linux
+ok   safe_url               LOW RISK  https://www.amazon.in/gp/cart/view.html
+ok   safe_url               LOW RISK  https://www.bits-pilani.ac.in/
+ok   safe_url               LOW RISK  https://mail.google.com/mail/u/0/
+ok   phishing_url           HIGH RISK http://paypal-account-verify.xyz/login
+ok   phishing_url           HIGH RISK http://secure-sbi-kyc-update.top/verify/account
+ok   phishing_url           HIGH RISK http://192.168.10.5/bank/login.php
+ok   phishing_url           HIGH RISK http://bit.ly/3xYzAbC
+ok   phishing_url           HIGH RISK http://amazon-free-bonus-claim.club/signin?id=88
+ok   phishing_url           HIGH RISK http://hdfc-netbanking-confirm.info/login/update
+ok   phishing_url           HIGH RISK http://paytm-secure-offer.xyz/?id=123
+
+=== Per category (flagged = CAUTION or HIGH RISK) ===
+category                 cases  flagged  HIGH only  correct  correct(HIGH only)
+safe_sms_casual              4        0          0        4                   4
+safe_sms_transactional       4        1          1        3                   3
+scam_sms                     8        8          8        8                   8
+safe_url                     5        0          0        5                   5
+phishing_url                 7        7          7        7                   7
+
+Scams/phishing caught: 15/15 (HIGH only: 15/15)
+Safe items falsely flagged: 1/13 (HIGH only: 1/13)
+Saved: /home/armsocproject/threat_detector/results/tests_20261122_193541.csv

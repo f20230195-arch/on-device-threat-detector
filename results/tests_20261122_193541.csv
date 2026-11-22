@@ -1,0 +1,29 @@
+category,expected,text,verdict,flagged,high,correct,correct_high_only,ms
+safe_sms_casual,safe,Are we still meeting at 5 for the lab session?,LOW RISK,False,False,True,True,7.9
+safe_sms_casual,safe,Can you send me the notes from yesterday's class when you get a chance,LOW RISK,False,False,True,True,1.0
+safe_sms_casual,safe,Happy birthday! Hope you have a great day. Dinner on Saturday?,LOW RISK,False,False,True,True,0.7
+safe_sms_casual,safe,I'll be 10 minutes late. Start without me.,LOW RISK,False,False,True,True,0.7
+safe_sms_transactional,safe,Your OTP for login is 624815. Do not share it with anyone.,LOW RISK,False,False,True,True,0.7
+safe_sms_transactional,safe,Your order has been shipped and will be delivered tomorrow by 8 PM.,LOW RISK,False,False,True,True,0.7
+safe_sms_transactional,safe,Reminder: your electricity bill of Rs 1450 is due on 28 Nov. Pay on the official app.,LOW RISK,False,False,True,True,0.7
+safe_sms_transactional,safe,Rs 500 debited from your account ending 4821 at a grocery store. Balance Rs 12300.,HIGH RISK,True,True,False,False,0.7
+scam_sms,scam,Dear customer your bank account will be suspended today. Update your KYC now at http://kyc-verify-update.xyz or lose access.,HIGH RISK,True,True,True,True,48.5
+scam_sms,scam,Congratulations! You have won a Rs 50 lakh lottery. Send your Aadhaar and bank details to claim your prize.,HIGH RISK,True,True,True,True,1.2
+scam_sms,scam,URGENT: Your SIM will be blocked in 24 hours. Share your OTP to complete verification.,HIGH RISK,True,True,True,True,0.8
+scam_sms,scam,Your ATM card is blocked. Click http://bit.ly/3AbCdEf and enter your card number and PIN to reactivate.,HIGH RISK,True,True,True,True,24.4
+scam_sms,scam,You have been selected for a free iPhone. Pay Rs 99 delivery fee at http://free-iphone-claim.top now. Offer ends today.,HIGH RISK,True,True,True,True,14.6
+scam_sms,scam,Aapka PAN card update nahi hua hai. Abhi link par click karke details bharein warna account band ho jayega: http://pan-update-secure.info,HIGH RISK,True,True,True,True,14.4
+scam_sms,scam,"Income tax refund of Rs 18,540 is pending. Verify your account details at http://incometax-refund-claim.xyz to receive it.",HIGH RISK,True,True,True,True,14.4
+scam_sms,scam,Job offer: earn Rs 5000 daily from home. Pay a registration fee of Rs 500 and share your account number to start.,HIGH RISK,True,True,True,True,1.2
+safe_url,safe,https://www.wikipedia.org,LOW RISK,False,False,True,True,0.0
+safe_url,safe,https://github.com/torvalds/linux,LOW RISK,False,False,True,True,0.0
+safe_url,safe,https://www.amazon.in/gp/cart/view.html,LOW RISK,False,False,True,True,0.0
+safe_url,safe,https://www.bits-pilani.ac.in/,LOW RISK,False,False,True,True,0.0
+safe_url,safe,https://mail.google.com/mail/u/0/,LOW RISK,False,False,True,True,0.0
+phishing_url,phishing,http://paypal-account-verify.xyz/login,HIGH RISK,True,True,True,True,13.4
+phishing_url,phishing,http://secure-sbi-kyc-update.top/verify/account,HIGH RISK,True,True,True,True,13.4
+phishing_url,phishing,http://192.168.10.5/bank/login.php,HIGH RISK,True,True,True,True,23.5
+phishing_url,phishing,http://bit.ly/3xYzAbC,HIGH RISK,True,True,True,True,13.4
+phishing_url,phishing,http://amazon-free-bonus-claim.club/signin?id=88,HIGH RISK,True,True,True,True,13.4
+phishing_url,phishing,http://hdfc-netbanking-confirm.info/login/update,HIGH RISK,True,True,True,True,13.4
+phishing_url,phishing,http://paytm-secure-offer.xyz/?id=123,HIGH RISK,True,True,True,True,13.5

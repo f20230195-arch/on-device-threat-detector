@@ -1,0 +1,18 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Large or separately licensed files: do NOT commit (see README, "Files that are not in this repository")
+*.pte
+llama32_1b_instruct/*.json
+llama32_1b_instruct/*.jinja
+threat_project/url_model.joblib
+threat_project/spam.csv
+threat_project/phishing_site_urls.csv
+phishing_site_urls.csv
+spam.csv
+
+# Local scratch
+tmp/
+*.swp

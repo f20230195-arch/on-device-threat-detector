@@ -1,0 +1,117 @@
+--- interfaces visible in this isolated environment:
+lo               DOWN           
+--- trying to reach the internet (must fail):
+RESULT: no network, as intended: [Errno 101] Network is unreachable
+--- running the pipeline:
+W1122 19:12:15.499000 2596 venv/lib/python3.13/site-packages/torch/utils/_pytree.py:646] <enum 'KernelPreference'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+W1122 19:12:15.560000 2596 venv/lib/python3.13/site-packages/torch/utils/_pytree.py:646] <enum 'ScaleCalculationMode'> is an Enum subclass and is now natively supported by torch.compile as an opaque value type. Calling register_constant() on Enum subclasses is deprecated and will be an error in a future release.
+Detectors loaded in 2.21 s | Llama loaded in 2.36 s
+Pi temp 41.7 C | throttled=0x0 | RSS after load 892 MB
+============================================================
+
+> Congratulations! You won a free prize. Claim now: http://bit.ly/xyz
+VERDICT: HIGH RISK  (input type: SMS)
+  Message scam score: model 0.99 -> final 0.99
+  Link http://bit.ly/xyz: 0.55
+
+Why (llama): This message is likely a scam because its wording matches known scam messages, and the link looks unsafe due to the link shortener.
+Action: Do not click any links, reply, or share any details. Delete it and report it as spam.
+  [timing] detectors 58 ms | LLM 10.0 s (prompt 352 tok, first token 7.9 s, 12.78 tok/s) | end-to-end 10.0 s | peak RAM 2793 MB | 49.4 C | throttled=0x0
+------------------------------------------------------------
+
+> http://secure-login-paypal.verify-account.xyz/update
+VERDICT: HIGH RISK  (input type: URL)
+  Link http://secure-login-paypal.verify-account.xyz/update: 0.95
+
+Why (llama): This link is likely a scam because it pretends to be the real PayPal website, but its address contains words often used in scams, and it does not use a secure connection.
+Action: Do not open this link or enter any details on it.
+  [timing] detectors 24 ms | LLM 6.9 s (prompt 374 tok, first token 4.1 s, 12.65 tok/s) | end-to-end 6.9 s | peak RAM 2805 MB | 50.5 C | throttled=0x0
+------------------------------------------------------------
+
+> Are we meeting at 5 for the lab session?
+VERDICT: LOW RISK  (input type: SMS)
+  Message scam score: model 0.12 -> final 0.12
+
+Why (llama): This message does not appear to be a scam.
+Action: No action needed, but stay careful with unexpected requests for money, OTPs or passwords.
+  [timing] detectors 1 ms | LLM 4.3 s (prompt 326 tok, first token 3.5 s, 13.63 tok/s) | end-to-end 4.3 s | peak RAM 2805 MB | 51.6 C | throttled=0x0
+------------------------------------------------------------
+
+> https://www.google.com
+VERDICT: LOW RISK  (input type: URL)
+  Link https://www.google.com: 0.02 [trusted domain]
+
+Why (llama): This link goes to a well-known website, which is likely to be safe.
+Action: No action needed, but stay careful with unexpected requests for money, OTPs or passwords.
+  [timing] detectors 0 ms | LLM 4.7 s (prompt 325 tok, first token 3.5 s, 13.23 tok/s) | end-to-end 4.7 s | peak RAM 2805 MB | 52.1 C | throttled=0x0
+------------------------------------------------------------
+
+> Dear customer, your SBI account will be blocked today. Update KYC now: http://sbi-kyc-update.xyz/login
+VERDICT: HIGH RISK  (input type: SMS)
+  Message scam score: model 0.94 -> final 0.90
+  Rules matched: 2
+  Link http://sbi-kyc-update.xyz/login: 0.95
+
+Why (llama): This message is likely a scam because its wording matches known scam messages, it asks for personal info, threatens to block your account, and the link looks suspicious.
+Action: Do not click any links, reply, or share any details. Delete it and report it as spam.
+  [timing] detectors 25 ms | LLM 6.9 s (prompt 404 tok, first token 4.4 s, 12.7 tok/s) | end-to-end 7.0 s | peak RAM 2822 MB | 52.7 C | throttled=0x0
+------------------------------------------------------------
+
+> Your OTP is 482913. Do not share it with anyone. - HDFC Bank
+VERDICT: LOW RISK  (input type: SMS)
+  Message scam score: model 0.27 -> final 0.27
+
+Why (llama): This message does not appear to be a scam.
+Action: No action needed, but stay careful with unexpected requests for money, OTPs or passwords.
+  [timing] detectors 1 ms | LLM 4.3 s (prompt 326 tok, first token 3.5 s, 13.53 tok/s) | end-to-end 4.3 s | peak RAM 2822 MB | 52.1 C | throttled=0x0
+------------------------------------------------------------
+
+> Hey, are you free for dinner tomorrow?
+VERDICT: LOW RISK  (input type: SMS)
+  Message scam score: model 0.22 -> final 0.22
+
+Why (llama): This message does not appear to be a scam.
+Action: No action needed, but stay careful with unexpected requests for money, OTPs or passwords.
+  [timing] detectors 1 ms | LLM 4.3 s (prompt 326 tok, first token 3.6 s, 13.61 tok/s) | end-to-end 4.3 s | peak RAM 2822 MB | 52.1 C | throttled=0x0
+------------------------------------------------------------
+
+> Dear customer, your SBI account will be blocked today. Update your KYC immediately to avoid suspension.
+VERDICT: HIGH RISK  (input type: SMS)
+  Message scam score: model 0.92 -> final 0.90
+  Rules matched: 3
+
+Why (llama): This message is likely a scam because it matches known scam messages, and it has warning signs that are typical of scams.
+Action: Do not click any links, reply, or share any details. Delete it and report it as spam.
+  [timing] detectors 1 ms | LLM 5.8 s (prompt 358 tok, first token 3.9 s, 12.76 tok/s) | end-to-end 5.8 s | peak RAM 2822 MB | 52.7 C | throttled=0x0
+------------------------------------------------------------
+
+> Aapka bank account band ho jayega. Abhi KYC update karein varna 24 ghante mein block.
+VERDICT: HIGH RISK  (input type: SMS)
+  Message scam score: model 0.83 -> final 0.90
+  Rules matched: 3
+
+Why (llama): This message is likely a scam because it matches known scam messages, and it has warning signs that are typical of scams.
+Action: Do not click any links, reply, or share any details. Delete it and report it as spam.
+  [timing] detectors 1 ms | LLM 5.8 s (prompt 358 tok, first token 3.9 s, 12.76 tok/s) | end-to-end 5.8 s | peak RAM 2822 MB | 54.3 C | throttled=0x0
+------------------------------------------------------------
+
+> You have won Rs 25,00,000 in the KBC lottery. Send your Aadhaar and bank details to claim.
+VERDICT: HIGH RISK  (input type: SMS)
+  Message scam score: model 0.93 -> final 0.90
+  Rules matched: 2
+
+Why (llama): This message is very likely a scam because its wording closely matches known scam messages, and it asks for sensitive information.
+Action: Do not click any links, reply, or share any details. Delete it and report it as spam.
+  [timing] detectors 1 ms | LLM 5.6 s (prompt 349 tok, first token 3.8 s, 12.79 tok/s) | end-to-end 5.6 s | peak RAM 2822 MB | 54.3 C | throttled=0x0
+------------------------------------------------------------
+
+> http://paytm-secure-offer.xyz/?id=123
+VERDICT: HIGH RISK  (input type: URL)
+  Link http://paytm-secure-offer.xyz/?id=123: 0.62
+
+Why (llama): This link is likely a scam because it pretends to be the official Paytm website, but it's not. The address contains words often used in scams, and the site name has several hyphens, which is unusual for a legitimate website.
+Action: Do not open this link or enter any details on it.
+  [timing] detectors 24 ms | LLM 7.9 s (prompt 366 tok, first token 4.0 s, 12.57 tok/s) | end-to-end 8.0 s | peak RAM 2822 MB | 54.9 C | throttled=0x0
+------------------------------------------------------------
+
+Log saved to /home/armsocproject/threat_detector/results/run_20261122_191219.jsonl
