@@ -4,8 +4,7 @@ An offline assistant that checks a pasted **SMS** or **URL** for scam and phishi
 trained models and rules, and explains it in plain language using **Llama 3.2 1B Instruct** running through
 **ExecuTorch (XNNPACK)** on the Arm CPU of a **Raspberry Pi 5**. Nothing leaves the device.
 
-Team: **Anoushka Birje, Aaditya Shrivastava**                                                                                               Demo video: **(https://drive.google.com/file/d/1F53SoAn8jTEqGpmxzc5pxnkgOcaqYwYF/view?usp=drive_link)** | 
-Technical report: [Technical_Report.pdf](docs/Technical_Report.pdf)
+Team: **Anoushka Birje, Aaditya Shrivastava** | Demo video: **(https://drive.google.com/file/d/1F53SoAn8jTEqGpmxzc5pxnkgOcaqYwYF/view?usp=drive_link)** | Technical report: [Technical_Report.pdf](docs/Technical_Report.pdf)
 
 > Phase 1 scope: SMS scam detector + phishing URL detector + Llama explanation, running on the Pi with measured
 > on-device numbers. Network intrusion detection is planned for Phase 2 and is **not** implemented.
