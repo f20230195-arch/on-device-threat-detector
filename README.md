@@ -153,7 +153,7 @@ URL figures come from re-running training/url_detector.py. They use URL text fea
 
 ## Credits and licences
 
-- Llama 3.2 1B Instruct: Meta, under the Llama 3.2 Community Licence (built with Llama). ExecuTorch and
+- Llama 3.2 1B Instruct: Meta, under the Llama 3.2 Community Licence (**Built with Llama**). ExecuTorch and
   optimum-executorch: PyTorch / Hugging Face.
 - Data: UCI SMS Spam Collection (via Kaggle), Kaggle "phishing site URLs", Tranco top-1000 list.
 - Repository licence: MIT (see LICENSE). This covers the code only; the Llama model keeps its own licence.
