@@ -131,6 +131,13 @@ Thermal sampling and cold/warm procedure are described in `docs/on_device_result
 
 Full method, per-run numbers and caveats: **`docs/on_device_results.md`**.
 
+## Model metrics (held-out data, measured before deployment)
+| Model | Evaluation data | Result |
+|---|---|---|
+| URL classifier (random forest, 17 features) | 20,000 URLs: stratified 20% split of 100,000 sampled rows, random_state=42 | accuracy 0.89; safe precision/recall 0.92/0.92; malicious precision 0.81, recall 0.80, F1 0.80 |
+| SMS classifier | 1,115 messages: 20% split of the Kaggle SMS Spam Collection | accuracy 0.98; scam precision 0.95, recall 0.93 |
+URL figures come from re-running training/url_detector.py. They use URL text features only (no page content or domain age) and a random split, so they may be optimistic.
+
 ## Limitations
 
 - **False alarms on genuine transactional SMS.** The "safe" training class is mostly casual chat. Example from our
