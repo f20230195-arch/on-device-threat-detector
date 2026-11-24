@@ -81,5 +81,5 @@ On the 11 demo messages the verdicts were as intended (scams HIGH RISK, safe mes
 The pipeline was run inside an empty network namespace (`sudo unshare --net`, `scripts/offline\_test.sh`). The log
 (`results/run\_offline\_1.log`) shows only a loopback interface, a failed connection attempt
 (`\[Errno 101] Network is unreachable`), and then the pipeline loading and processing all 11 demo messages (11 verdict lines in the log). Hugging Face offline mode is set in
-the code. \[Add: video of the Pi with Wi-Fi switched off.]
+the code. [https://drive.google.com/file/d/1F53SoAn8jTEqGpmxzc5pxnkgOcaqYwYF/view?usp=drive_link]
 
