@@ -144,7 +144,7 @@ URL figures come from re-running training/url_detector.py. They use URL text fea
   tests: a bank debit alert scored 0.80 purely from the SMS model (words such as "rs", "500", "account"; no rule fired).
 - The scam rules were tuned on the 11 demo messages, and our tests are synthetic and small; no real-message test set
   has been collected yet. The 15/15 result describes textbook-style scams and is not an accuracy claim.
-- English and Hinglish only. URL model metrics: **[add the URL model classification report]**.
+- English and Hinglish only.
 - Llama paraphrases loosely; a template explanation is used if it refuses, rambles or returns nothing.
 - Per-process start-up is slow (the first generation in a process is slower than later ones); keep the process running.
 - CPU only, 4 GB RAM: the 3B Llama model was not tried because it would not fit comfortably.
