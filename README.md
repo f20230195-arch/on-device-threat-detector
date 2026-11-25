@@ -4,7 +4,9 @@ An offline assistant that checks a pasted **SMS** or **URL** for scam and phishi
 trained models and rules, and explains it in plain language using **Llama 3.2 1B Instruct** running through
 **ExecuTorch (XNNPACK)** on the Arm CPU of a **Raspberry Pi 5**. Nothing leaves the device.
 
-Team: **Anoushka Birje, Aaditya Shrivastava** | Demo video: **(https://drive.google.com/file/d/1F53SoAn8jTEqGpmxzc5pxnkgOcaqYwYF/view?usp=drive_link)** | Technical report: [Technical_Report.pdf](docs/Technical_Report.pdf)
+**Built with Llama.**
+
+Team: **Anoushka Birje, Aaditya Shrivastava** | [Demo video](https://drive.google.com/file/d/1F53SoAn8jTEqGpmxzc5pxnkgOcaqYwYF/view?usp=drive_link) | [Technical report](docs/Technical_Report.pdf)
 
 > Phase 1 scope: SMS scam detector + phishing URL detector + Llama explanation, running on the Pi with measured
 > on-device numbers. Network intrusion detection is planned for Phase 2 and is **not** implemented.
@@ -51,6 +53,7 @@ get a floor of 0.55; a brand name on a non-trusted domain adds 0.15 (capped at 0
 | `colab/pipeline_colab_export.py` | Original Colab export the Pi pipeline was ported from (provenance only, not runnable as is) |
 | `requirements-pi.txt` | `pip freeze` from the Pi (note: `torch==2.15.0+cpu` comes from the PyTorch CPU index) |
 | `docs/on_device_results.md` | Measurements, method and caveats |
+| `docs/Technical_Report.pdf` | Phase 1 technical report |
 | `results/` | Raw logs from the Pi runs |
 | `threat_project/` | Detector files (see its README) |
 | `llama32_1b_instruct/` | Llama files (not committed, see below) |
@@ -79,18 +82,22 @@ tested; use the steps above.
 ### Files that are not in this repository
 
 - **`llama32_1b_instruct/`**: `model.pte` (about 790 MB), `tokenizer.json`, `tokenizer_config.json`,
-  `chat_template.jinja`. Too large for git, and the Llama 3.2 Community Licence applies to the exported model.
-  We exported it once on x86 Google Colab (gated model: accept Meta's licence on Hugging Face and log in first):
-  ```bash
-  pip install git+https://github.com/huggingface/optimum-executorch.git
-  optimum-cli export executorch --model "meta-llama/Llama-3.2-1B-Instruct" --task "text-generation" \
-    --recipe "xnnpack" --use_custom_sdpa --use_custom_kv_cache --qlinear 8da4w --qembedding 4w \
-    --output_dir="./llama32_1b_instruct"
-  ```
-  The exported file ran **unchanged** on the Pi 5 (no re-export). Copy the four files into `llama32_1b_instruct/`.
+  `chat_template.jinja`. Too large for git, and the Llama 3.2 Community License applies to the exported model.
+  We exported it once on x86 Google Colab (gated model: accept Meta's license on Hugging Face and log in first);
+  the commands are just below. The exported file ran **unchanged** on the Pi 5 (no re-export).
+  Copy the four files into `llama32_1b_instruct/`.
 - **`threat_project/url_model.joblib`**: regenerate with `training/url_detector.py` (needs the Kaggle
-  "phishing site URLs" CSV), or take it from the release. Datasets are not redistributed here:
-  SMS Spam Collection (Kaggle) and phishing site URLs (Kaggle). The Tranco top-1000 list is included.
+  "phishing site URLs" CSV). Datasets are not redistributed here: SMS Spam Collection (Kaggle) and
+  phishing site URLs (Kaggle). The Tranco top-1000 list is included.
+
+Export commands (run once on Google Colab):
+
+```bash
+pip install git+https://github.com/huggingface/optimum-executorch.git
+optimum-cli export executorch --model "meta-llama/Llama-3.2-1B-Instruct" --task "text-generation" \
+  --recipe "xnnpack" --use_custom_sdpa --use_custom_kv_cache --qlinear 8da4w --qembedding 4w \
+  --output_dir="./llama32_1b_instruct"
+```
 
 ## Run
 
@@ -115,6 +122,7 @@ python summarize_results.py               # tables from the newest results/run_*
 /usr/bin/time -v python pi_pipeline.py --repeat 2 2>&1 | tee run_pipeline.log        # peak RAM from "Maximum resident set size"
 sudo unshare --net bash scripts/offline_test.sh 2>&1 | tee run_offline.log            # offline proof
 ```
+
 Thermal sampling and cold/warm procedure are described in `docs/on_device_results.md`.
 
 ## Results (measured on the Raspberry Pi 5)
@@ -132,12 +140,13 @@ Thermal sampling and cold/warm procedure are described in `docs/on_device_result
 Full method, per-run numbers and caveats: **`docs/on_device_results.md`**.
 
 ## Model metrics (held-out data, measured before deployment)
+
 | Model | Evaluation data | Result |
 |---|---|---|
 | URL classifier (random forest, 17 features) | 20,000 URLs: stratified 20% split of 100,000 sampled rows, random_state=42 | accuracy 0.89; safe precision/recall 0.92/0.92; malicious precision 0.81, recall 0.80, F1 0.80 |
 | SMS classifier | 1,115 messages: 20% split of the Kaggle SMS Spam Collection | accuracy 0.98; scam precision 0.95, recall 0.93 |
 
-URL figures come from re-running training/url_detector.py. They use URL text features only (no page content or domain age) and a random split, so they may be optimistic.
+URL figures come from re-running `training/url_detector.py`. They use URL text features only (no page content or domain age) and a random split, so they may be optimistic.
 
 ## Limitations
 
@@ -151,10 +160,10 @@ URL figures come from re-running training/url_detector.py. They use URL text fea
 - CPU only, 4 GB RAM: the 3B Llama model was not tried because it would not fit comfortably.
 - Network intrusion detection is not implemented (planned for Phase 2).
 
-## Credits and licences
+## Credits and licenses
 
-- Llama 3.2 1B Instruct: Meta, under the Llama 3.2 Community Licence (**Built with Llama**). ExecuTorch and
-  optimum-executorch: PyTorch / Hugging Face.
+- **Built with Llama.** Llama 3.2 1B Instruct: Meta, under the Llama 3.2 Community License and its Acceptable Use Policy.
+  ExecuTorch and optimum-executorch: PyTorch / Hugging Face.
 - Data: UCI SMS Spam Collection (via Kaggle), Kaggle "phishing site URLs", Tranco top-1000 list.
-- Repository licence: MIT (see LICENSE). This covers the code only; the Llama model keeps its own licence.
-- See NOTICE for the Llama 3.2 licence attribution.
+- Repository license: MIT (see `LICENSE`). This covers the code only; the Llama model keeps its own license.
+- See `NOTICE` for the Llama 3.2 license attribution.
